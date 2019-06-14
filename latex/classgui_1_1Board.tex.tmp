@@ -1,0 +1,33 @@
+\hypertarget{classgui_1_1Board}{}\section{gui.\+Board Class Reference}
+\label{classgui_1_1Board}\index{gui.\+Board@{gui.\+Board}}
+
+
+Inheritance diagram for gui.\+Board\+:
+% FIG 0
+
+
+Collaboration diagram for gui.\+Board\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgui_1_1Board_a8326c07ce89358c6cdacd6942df207c4}\label{classgui_1_1Board_a8326c07ce89358c6cdacd6942df207c4}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, master=None, kwargs)
+\item 
+\mbox{\Hypertarget{classgui_1_1Board_a88666801ac5edce175761470e2326ffe}\label{classgui_1_1Board_a88666801ac5edce175761470e2326ffe}} 
+def {\bfseries on\+\_\+click} (self, event)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgui_1_1Board_a1d1e37287282895c8b2876772aa5f534}\label{classgui_1_1Board_a1d1e37287282895c8b2876772aa5f534}} 
+{\bfseries dots}
+\item 
+\mbox{\Hypertarget{classgui_1_1Board_a7690f9a1f2023268990cf8d25fb93ebf}\label{classgui_1_1Board_a7690f9a1f2023268990cf8d25fb93ebf}} 
+{\bfseries count}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+gui.\+py\end{DoxyCompactItemize}
