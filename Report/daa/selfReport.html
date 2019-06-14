@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+
+<style>
+
+table {
+  width:40%;
+  margin-top: 30px;
+  margin-left: 75px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+
+<body>
+
+<h4 align="center">Analysis of Convex Hull Algorithms</h4>
+<h3 style="font-size: 150%">General Input</h3>
+<p style="font-size: 125%">Random datapoints are generated using a python script and all the three algorithms are run. The running times are tabulated. below</p>
+
+<table id="t01" align="center">
+  <tr>
+    <th height="15">Input size</th>
+    <th height="15">Jarvis March</th> 
+    <th height="15">Graham Scan</th>
+    <th height="15">Kirk Patrick- Seidel</th>
+  </tr>
+  <tr>
+    <td height="15">10</td>
+    <td height="15">9e-05s</td>
+    <td height="15">0.001035s</td>
+    <td height="15">0.00043s</td>
+  </tr>
+  <tr>
+    <td height="15">100</td>
+    <td height="15">0.000344s</td>
+    <td height="15">0.006249s</td>
+    <td height="15">0.001129s</td>
+  </tr>
+  <tr>
+    <td height="15">1000</td>
+    <td height="15">0.000697s</td>
+    <td height="15">0.095285s</td>
+    <td height="15">0.007289s</td>
+  </tr>
+  <tr>
+    <td height="15">10000</td>
+    <td height="15">0.004021s</td>
+    <td height="15">1.58917s</td>
+    <td height="15">0.05352s</td>
+  </tr>
+  <tr>
+    <td height="15">100000</td>
+    <td height="15">0.076825s</td>
+    <td height="15">34.4927s</td>
+    <td height="15">0.772348s</td>
+  </tr>
+</table>
+
+<p style="font-size: 125%"> Theoritical complexities of these algorithms are</p>
+<ul style="font-size: 125%">
+  <li><b>Jarvis March: </b>O(nh)</li>
+  <li><b>Graham Scan: </b>O(nlogn)</li>
+  <li><b>Kirk Patrick-Seidel: </b> O(nlogh)</li>
+</ul> 
+<p style="font-size: 125%"> where h is the number of points on the hull and n is the number of input points. The above rnning times are for random points on a plane. So, h << n and thus Jarvis March and Kirk Patrick - Seidel run faster</p>
+<p style="font-size: 125%"> <i>The above running times of the algorithms do not comply with these complexities accurately because the constants in the running time dominate. However, asymptotically the running times comply with the complexities.</i></p>
+<br>
+<br>
+<h3 style="font-size: 150%">When all the points are on the hull</h3>
+<p style="font-size: 125%">All the points are on the hull implies n = h and hence Jarvis March's complexity becomes O(n^2) and Kirk Patrick - Siedel's becomes O(nlogn). To generate such datapoints, random points are sampled from a 2D circle.</p>
+<table id="t01" align="center">
+  <tr>
+    <th height="15">Input size</th>
+    <th height="15">Jarvis March</th> 
+    <th height="15">Graham Scan</th>
+    <th height="15">Kirk Patrick- Seidel</th>
+  </tr>
+  <tr>
+    <td height="15">10</td>
+    <td height="15">0.000122s</td>
+    <td height="15">0.000758s</td>
+    <td height="15">0.00053s</td>
+  </tr>
+  <tr>
+    <td height="15">100</td>
+    <td height="15">0.000544s</td>
+    <td height="15">0.012341s</td>
+    <td height="15">0.002113s</td>
+  </tr>
+  <tr>
+    <td height="15">1000</td>
+    <td height="15">0.013926s</td>
+    <td height="15">0.130653s</td>
+    <td height="15">0.033391s</td>
+  </tr>
+  <tr>
+    <td height="15">10000</td>
+    <td height="15">1.16117s</td>
+    <td height="15">1.90969s</td>
+    <td height="15">0.364094s</td>
+  </tr>
+  <tr>
+    <td height="15">100000</td>
+    <td height="15">46.5338s</td>
+    <td height="15">35.916s</td>
+    <td height="15">8.70243s</td>
+  </tr>
+ </table>
+<ul> <li style="font-size: 125%">It can be noted that Jarvis March runs slowest of all for larger inputs.</li>
+<li style="font-size: 125%"> Kirk-Patrick and Graham scan run for different times in the table above but asymptotically it can be seen that both approach to a same number</li>
+</ul>
+<br>
+<p style="font-size: 125%"><i><b>Jarvis March works best when the points are input in the order in which points on the hull come earlier.</b></i></p>
+<br>
+<br>
+<h3 style="font-size: 150%">Outputs for certain inputs</h3>
+<h4 style="font-size: 150%">Simple</h2>
+	
+<h4>Graham Scan</h4>
+<img src="1/graham.gif" >
+<h4>Jarvis March</h4>
+<img src="1/jarvis.gif">
+<h4>KirkPatrick-Siedel</h4>
+<img src="1/kirk.gif">
+<h2 style="font-size: 150%">Circle</h2>
+<h4>Graham Scan</h4>
+<img src="2/graham.gif">
+<h4>Jarvis March</h4>
+<img src="2/jarvis.gif">
+<h4>KirkPatrick-Siedel</h4>
+<img src="2/kirk.gif">
+<h2 style="font-size: 150%">Spiral</h2>
+<h4>Graham Scan</h4>
+<img src="3/graham.gif">
+<h4>Jarvis March</h4>
+<img src="3/jarvis.gif">
+<h4>KirkPatrick-Siedel</h4>
+<img src="3/kirk.gif">
+<h2 style="font-size: 150%">Star</h2>
+<h4>Graham Scan</h4>
+<img src="4/graham.gif">
+<h4>Jarvis March</h4>
+<img src="4/jarvis.gif">
+<h4>KirkPatrick-Siedel</h4>
+<img src="4/kirk.gif">
+</body>
+</html>
